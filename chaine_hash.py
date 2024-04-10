@@ -1,10 +1,14 @@
 class ChaineHash:
+
+    NAME = "Метод цепочек"
+    MOD = 8192
+
     def __init__(self):
-        self._hash_table = [[] for _ in range(256)]
+        self._hash_table = [[] for _ in range(self.MOD)]
 
     @staticmethod
     def hash_function(num):
-        return sum(map(int, str(abs(num)))) % 256
+        return sum(map(int, str(abs(num)))) % ChaineHash.MOD
 
     def add_num(self, num):
         hash_value = self.hash_function(num)

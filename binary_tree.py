@@ -2,6 +2,9 @@ from typing import Iterable, Optional
 
 
 class BinaryTree:
+
+    NAME = "Бинарное дерево"
+
     def __init__(self, collection: Optional[Iterable] = None):
         self._head_node = BinaryTreeNode()
         for el in collection:

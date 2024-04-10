@@ -2,6 +2,9 @@ from typing import Iterable, Optional
 
 
 class InterpolationSearcher:
+
+    NAME = "Интерполяционный поиск"
+
     def __init__(self, collection: Optional[Iterable] = None):
         self._array = [] if collection is None else list(collection)
         self._array.sort()
